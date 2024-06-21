@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recepies_app/pages/login_page.dart';
+import 'package:recipe_magic/pages/home_page.dart';
+import 'package:recipe_magic/pages/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,7 +38,11 @@ class MyApp extends StatelessWidget {
                   color: Colors.black,
                   fontSize: 25,
                   fontWeight: FontWeight.bold))),
-      home: LoginPage(),
+      initialRoute: "/login",
+      routes: {
+        '/login': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_magic/services/auth_service.dart';
+import 'package:status_alert/status_alert.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -55,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextFormField(
-                initialValue: "sony",
+                initialValue: 'emilys',
                 onSaved: (value) {
                   setState(() {
                     username = value;
@@ -70,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: InputDecoration(hintText: "Username"),
               ),
               TextFormField(
-                initialValue: "12345",
+                initialValue: 'emilyspass',
                 onSaved: (value) {
                   setState(() {
                     password = value;
@@ -96,10 +98,24 @@ class _LoginPageState extends State<LoginPage> {
       width: MediaQuery.sizeOf(context).width * 0.60,
       child: ElevatedButton(
         child: const Text("Login"),
-        onPressed: () {
+        onPressed: () async {
           if (_loginFormKey.currentState?.validate() ?? false) {
             _loginFormKey.currentState?.save();
-            print("$username-$password");
+            bool result = await AuthService().login(username!, password!);
+
+            print(result);
+            if (!result) {
+              StatusAlert.show(context,
+                  duration: const Duration(seconds: 2),
+                  title: "Login Failed",
+                  subtitle: "Please Try Again",
+                  configuration: const IconConfiguration(
+                    icon: Icons.error,
+                    color: Colors.red,
+                  ));
+            } else {
+              Navigator.pushReplacementNamed(context, '/home');
+            }
           }
         },
       ),
