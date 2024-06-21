@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _title() {
     return Text(
-      "RecipBook",
+      "Recipe Magic",
       style: TextStyle(fontSize: 35, fontWeight: FontWeight.w300),
     );
   }

@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Recip Book',
+      title: 'Recipe Magic',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           // This is the theme of your application.
