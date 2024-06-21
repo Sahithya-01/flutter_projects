@@ -1,4 +1,8 @@
 # Recipe Magic App
+<img width="325" alt="image" src="https://github.com/Sahithya-01/flutter_projects/assets/67500379/c97a3537-3b05-4f12-bc62-37c2d437fd4e">
+<img width="326" alt="image" src="https://github.com/Sahithya-01/flutter_projects/assets/67500379/1a6d8b5a-6bc0-44af-a983-2313111c7bd4">
+<img width="324" alt="image" src="https://github.com/Sahithya-01/flutter_projects/assets/67500379/0a370b87-5d36-4917-9ae2-45cedd409a18">
+
 
 ## Overview
 
@@ -26,25 +30,6 @@ Welcome to the Recipe Magic App! This project showcases a Flutter application de
 
 - [Flutter SDK](https://flutter.dev/docs/get-started/install)
 - [Android Studio](https://developer.android.com/studio) or [Xcode](https://developer.apple.com/xcode/) (for iOS development)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/recipe-app.git
-   cd recipe-app
-   ```
-
-2. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
-
-3. Run the application:
-   ```bash
-   flutter run
-   ```
-
 
 ## Usage
 
